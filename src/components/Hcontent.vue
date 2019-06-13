@@ -2,7 +2,7 @@
     <section class="g-section product g-space">
         <div class="product-list">
             <div class="partial-list" index="0">
-                <a href="https://www.xiaoyusan.com/insurance/detail?chn=h5index&amp;id=136956" v-for="(item,index) in shoplist" :key="index" class="product-item row" data-id="136956" data-classid="2" data-track="index_buy_new">
+                <router-link to="./homedetail" v-for="(item,index) in shoplist" :key="index" class="product-item row" data-id="136956" data-classid="2" data-track="index_buy_new">
                     <div class="product-img">
                         <i class="shine green">新品</i><img src="https://sslstatic.xiaoyusan.com/h5/img/m_index/article/h5item_1559730018.jpg" data-src="https://sslstatic.xiaoyusan.com/h5/img/m_index/article/h5item_1559730018.jpg" alt=""></div>
                     <div class="product-info col row">
@@ -25,7 +25,7 @@
                             <button class="btn-buy">立即投保</button>
                         </div>
                     </div>
-                </a>
+                </router-link>
 
             </div>
             <!-- <div class="partial-list hide" index="10">

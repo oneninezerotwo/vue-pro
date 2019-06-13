@@ -1,5 +1,6 @@
 <template>
-  <nav class="fixed-nav iphonex_padding iphonex_white" style="display: block;">
+  <!-- v-if判断仓库的状态是否出现底部组件 -->
+  <nav class="fixed-nav iphonex_padding iphonex_white" v-if="isshowfooter" style="display: block;">
     <div class="nav-content row">
       <a v-for="(item,index) in foot" :key="index" class="col" :class="{active:tab==index}" @click="heightlight(index)">
         <i :class="item.ico"></i>
@@ -46,9 +47,16 @@ export default {
         name: this.foot[index].name
       })
     }
+  },
+  //哪个组件要隐藏或出现，就在哪个组件监听当前组件的仓库状态
+  computed: {
+    isshowfooter() {
+      return this.$store.state.isfooter
+    }
   }
 }
 </script>
+
 <style>
 .fixed-nav {
   background-color: #fff;

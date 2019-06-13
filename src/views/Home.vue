@@ -40,6 +40,10 @@ import Hservice from "@/components/Hservice.vue";
     Haboutme,
     HteamWor,
     Hservice
+  },
+  //首页渲染数据后通知仓库显示尾部组件
+  created() {
+    this.$store.state.isfooter = 1;
   }
 })
 export default class Home extends Vue {}
